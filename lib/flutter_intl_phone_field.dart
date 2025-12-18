@@ -286,16 +286,14 @@ class IntlPhoneField extends StatefulWidget {
 
   /// Called when the user submits data.
   final void Function()? onEditingComplete;
-<<<<<<< HEAD
 
-=======
   /// Allowed country ISO codes (e.g. ['CN', 'US'])
   /// If null or empty, show all countries
   final List<String>? allowedCountryCodes;
 
   /// Device country ISO code (e.g. 'CN')
   final String? deviceCountryCode;
->>>>>>> f0c1eb5 (Initial commit)
+
   const IntlPhoneField({
     Key? key,
     this.formFieldKey,
@@ -353,11 +351,9 @@ class IntlPhoneField extends StatefulWidget {
     this.maxLengthEnforcement,
     this.buildCounter,
     this.onEditingComplete,
-<<<<<<< HEAD
-=======
+
     this.allowedCountryCodes,
     this.deviceCountryCode,
->>>>>>> f0c1eb5 (Initial commit)
   }) : super(key: key);
 
   @override
@@ -467,14 +463,10 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
           searchText: widget.searchText,
           countryList: _countryList,
           selectedCountry: _selectedCountry,
-<<<<<<< HEAD
-=======
 
           // ⭐ 新增
           allowedCountryCodes: widget.allowedCountryCodes,
           deviceCountryCode: widget.deviceCountryCode,
-
->>>>>>> f0c1eb5 (Initial commit)
           onCountryChanged: (Country country) {
             _selectedCountry = country;
             widget.onCountryChanged?.call(country);
@@ -525,13 +517,10 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
           ),
         );
       },
-<<<<<<< HEAD
-=======
       // ⭐ 新增
       allowedCountryCodes: widget.allowedCountryCodes,
       deviceCountryCode: widget.deviceCountryCode,
 
->>>>>>> f0c1eb5 (Initial commit)
       onChanged: (value) async {
         final phoneNumber = PhoneNumber(
           countryISOCode: _selectedCountry.code,

@@ -50,17 +50,13 @@ class CountryPickerDialog extends StatefulWidget {
   final PickerDialogStyle? style;
   final String languageCode;
 
-<<<<<<< HEAD
   final EdgeInsets? dialogPadding;
 
-=======
   final List<String>? allowedCountryCodes;
   final String? deviceCountryCode;
 
   final EdgeInsets? dialogPadding;
 
-
->>>>>>> f0c1eb5 (Initial commit)
   const CountryPickerDialog({
     Key? key,
     required this.searchText,
@@ -71,11 +67,9 @@ class CountryPickerDialog extends StatefulWidget {
     required this.filteredCountries,
     this.style,
     this.dialogPadding,
-<<<<<<< HEAD
-=======
+
     this.allowedCountryCodes,
     this.deviceCountryCode,
->>>>>>> f0c1eb5 (Initial commit)
   }) : super(key: key);
 
   @override
@@ -86,46 +80,14 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
   late List<Country> _filteredCountries;
   late Country _selectedCountry;
 
-<<<<<<< HEAD
-=======
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   _selectedCountry = widget.selectedCountry;
-  //
-  //   _filteredCountries = widget.filteredCountries.toList()
-  //     ..sort(_countryComparator);
-  //
-  //   // _selectedCountry = widget.selectedCountry;
-  //   // _filteredCountries = widget.filteredCountries.toList()
-  //   //   ..sort(
-  //   //     (a, b) => a
-  //   //         .localizedName(widget.languageCode)
-  //   //         .compareTo(b.localizedName(widget.languageCode)),
-  //   //   );
-  //   //
-  //   // super.initState();
-  // }
->>>>>>> f0c1eb5 (Initial commit)
   @override
   void initState() {
     super.initState();
     _selectedCountry = widget.selectedCountry;
 
-<<<<<<< HEAD
     _filteredCountries = widget.filteredCountries.toList()
-      ..sort(_countryComparator);
+      ..sort(_countryComparator)
 
-    // _selectedCountry = widget.selectedCountry;
-    // _filteredCountries = widget.filteredCountries.toList()
-    //   ..sort(
-    //     (a, b) => a
-    //         .localizedName(widget.languageCode)
-    //         .compareTo(b.localizedName(widget.languageCode)),
-    //   );
-    //
-    // super.initState();
-=======
     final availableCountries = _buildAvailableCountries();
 
     _filteredCountries = availableCountries.toList()
@@ -154,7 +116,6 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
     return widget.countryList
         .where((c) => codes.contains(c.code.toUpperCase()))
         .toList();
->>>>>>> f0c1eb5 (Initial commit)
   }
 
   @override
@@ -195,14 +156,12 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
                   //     );
                   //   if (mounted) setState(() {});
                   // },
-<<<<<<< HEAD
                   onChanged: (value) {
                     _filteredCountries = widget.countryList.stringSearch(value)
                       ..sort(_countryComparator);
                     if (mounted) setState(() {});
                   }),
             ),
-=======
                 onChanged: (value) {
                   final source = _buildAvailableCountries();
 
@@ -213,7 +172,6 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
                 },
 
               ),
->>>>>>> f0c1eb5 (Initial commit)
             const SizedBox(height: 20),
             Expanded(
               child: ListView.builder(
