@@ -444,6 +444,8 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
             widget.onCountryChanged?.call(country);
             setState(() {});
           },
+          allowedCountryCodes: widget.allowedCountryCodes,
+          deviceCountryCode: widget.deviceCountryCode,
         ),
       ),
     );
@@ -517,9 +519,6 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
           ),
         );
       },
-      // ⭐ 新增
-      allowedCountryCodes: widget.allowedCountryCodes,
-      deviceCountryCode: widget.deviceCountryCode,
 
       onChanged: (value) async {
         final phoneNumber = PhoneNumber(

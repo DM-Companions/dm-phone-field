@@ -55,8 +55,6 @@ class CountryPickerDialog extends StatefulWidget {
   final List<String>? allowedCountryCodes;
   final String? deviceCountryCode;
 
-  final EdgeInsets? dialogPadding;
-
   const CountryPickerDialog({
     Key? key,
     required this.searchText,
@@ -67,7 +65,6 @@ class CountryPickerDialog extends StatefulWidget {
     required this.filteredCountries,
     this.style,
     this.dialogPadding,
-
     this.allowedCountryCodes,
     this.deviceCountryCode,
   }) : super(key: key);
@@ -86,7 +83,7 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
     _selectedCountry = widget.selectedCountry;
 
     _filteredCountries = widget.filteredCountries.toList()
-      ..sort(_countryComparator)
+      ..sort(_countryComparator);
 
     final availableCountries = _buildAvailableCountries();
 
