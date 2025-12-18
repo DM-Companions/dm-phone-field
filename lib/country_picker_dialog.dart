@@ -147,21 +147,6 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
                         suffixIcon: const Icon(Icons.search),
                         labelText: widget.searchText,
                       ),
-                  // onChanged: (value) {
-                  //   _filteredCountries = widget.countryList.stringSearch(value)
-                  //     ..sort(
-                  //       (a, b) => a
-                  //           .localizedName(widget.languageCode)
-                  //           .compareTo(b.localizedName(widget.languageCode)),
-                  //     );
-                  //   if (mounted) setState(() {});
-                  // },
-                  onChanged: (value) {
-                    _filteredCountries = widget.countryList.stringSearch(value)
-                      ..sort(_countryComparator);
-                    if (mounted) setState(() {});
-                  }),
-            ),
                 onChanged: (value) {
                   final source = _buildAvailableCountries();
 
@@ -169,9 +154,7 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
                     ..sort(_countryComparator);
 
                   if (mounted) setState(() {});
-                },
-
-              ),
+                })),
             const SizedBox(height: 20),
             Expanded(
               child: ListView.builder(
