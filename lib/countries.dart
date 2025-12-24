@@ -1336,7 +1336,7 @@ const List<Country> countries = [
     maxLength: 9,
   ),
   Country(
-    name: "China",
+    name: "中国",
     nameTranslations: {
       "sk": "Čína",
       "se": "Kiinná",
