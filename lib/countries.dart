@@ -1342,7 +1342,7 @@ const List<Country> countries = [
       "se": "Kiinná",
       "pl": "Chiny",
       "no": "Kina",
-      "ja": "中国",
+      "ja": "日本",
       "it": "Cina",
       "zh": "中国",
       "nl": "China",
@@ -6606,7 +6606,7 @@ const List<Country> countries = [
     maxLength: 9,
   ),
   Country(
-    name: "Taiwan",
+    name: "中国台湾",
     nameTranslations: {
       "sk": "Taiwan",
       "se": "Taiwan",
